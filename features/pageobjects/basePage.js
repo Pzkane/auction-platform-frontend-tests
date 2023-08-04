@@ -18,4 +18,8 @@ export class BasePage {
   getInvalidCredentialsMsg() {
     return $("//span[@id='Login_error_msg']");
   }
+
+  getCurrentSubmitBtn() {
+    return $('button=Submit');
+  }
 }

@@ -12,7 +12,9 @@ export class SignupTest {
         await pages.createAccountPage.randomSelectSexRadioBtn().click();
     }
 
-    async assertcheckOffersPage() {
+    async assertCheckOffersPage() {
         await pages.checkOffersPage.getCheckOffersHeader().waitForDisplayed({ timeout: 5000 });
+        // Allow for offers and categories to load in
+        await browser.pause(3000);
     }
 }

@@ -17,4 +17,12 @@ export class LoginTest {
       "Wrong username/email or password"
     );
   }
+
+  async assertCheckDashboardPage() {
+    await pages.checkDashboardPage.getCheckDashboardTab().waitForDisplayed({ timeout: 10000 });
+  }
+
+  async assertCheckControlPanelPage() {
+    await pages.checkControlPanelPage.getCheckControlPanelTab().waitForDisplayed({ timeout: 10000 });
+  }
 }

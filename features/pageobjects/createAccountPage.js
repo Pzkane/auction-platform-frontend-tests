@@ -19,13 +19,8 @@ export class CreateAccountPage extends BasePage {
     return $('div[class="v-input--selection-controls__ripple primary--text"]');
   }
 
-
   getDropdownField(name) {
     return $(`select[id="sView1:r1:0:${name}::content"]`);
-  }
-
-  getCurrentSubmitBtn() {
-    return $('button=Submit');
   }
 
   async setDropdownValue(name, value) {

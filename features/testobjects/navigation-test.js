@@ -17,6 +17,10 @@ export class NavigationTest {
     await browser.url("/signup");
   }
 
+  async openAuctionPlatformOffersPage() {
+    await browser.url("/offers");
+  }
+
   async openAuctionPlatformProfilePage() {
     await browser.url("/");
     await pages.basePage
@@ -34,8 +38,13 @@ export class NavigationTest {
     await browser.pause(1000); // possible response delay
   }
 
-  async pressSignUpButton() {
-    await pages.createAccountPage.getCurrentSubmitBtn().click();
+  async pressSubmitButton() {
+    await pages.basePage.getCurrentSubmitBtn().click();
     await browser.pause(4000)
+  }
+
+  async pressAddOfferButton() {
+    await pages.offersPage.getAddOfferBtn().click();
+    await browser.pause(500)
   }
 }
