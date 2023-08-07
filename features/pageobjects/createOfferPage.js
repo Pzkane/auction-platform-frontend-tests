@@ -2,12 +2,8 @@ import { BasePage } from "./basePage";
 const path = require('path');
 
 export class CreateOfferPage extends BasePage {
-  getInputField(name) {
-    return $(`input[id="AddOffer_${name}"]`);
-  }
-
-  getTextArea(name) {
-    return $(`textarea[id="AddOffer_${name}"]`);
+  constructor() {
+    super('AddOffer');
   }
 
   getTagInputField(tagPosition) {

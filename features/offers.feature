@@ -14,4 +14,4 @@ Scenario Outline: User creates a new offer
   When User presses the Add Offer button
   And User fills out Add Offer form
   And User presses the Submit button to create offer
-  Then User sees with alert
+  Then User sees successful alert

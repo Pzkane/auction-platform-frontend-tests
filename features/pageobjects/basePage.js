@@ -1,4 +1,8 @@
 export class BasePage {
+  constructor(baseName = null) {
+    this.baseName = baseName;
+  }
+
   getEmailInputField() {
     return $("#Login_username");
   }
@@ -22,4 +26,13 @@ export class BasePage {
   getCurrentSubmitBtn() {
     return $('button=Submit');
   }
+
+  getInputField(name) {
+    return $(`input[id="${this.baseName}_${name}"]`);
+  }
+
+  getTextArea(name) {
+    return $(`textarea[id="${this.baseName}_${name}"]`);
+  }
+
 }

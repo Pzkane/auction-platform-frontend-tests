@@ -21,6 +21,10 @@ export class NavigationTest {
     await browser.url("/offers");
   }
 
+  async openAuctionPlatformControlPanelPage() {
+    await browser.url("/admin");
+  }
+
   async openAuctionPlatformProfilePage() {
     await browser.url("/");
     await pages.basePage

@@ -9,6 +9,6 @@ When("User presses the Submit button to create offer", async function () {
   await tests.offersTest.pressSubmitButton();
 });
 
-Then("User sees with alert", async function () {
+Then("User sees successful alert", async function () {
   await tests.offersTest.assertCheckOfferSuccessfulNotification();
 });

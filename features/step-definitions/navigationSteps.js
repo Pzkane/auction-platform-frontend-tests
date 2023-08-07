@@ -17,6 +17,10 @@ Given("User has opened Offers page", async function () {
   await tests.navigationTest.openAuctionPlatformOffersPage();
 });
 
+Given("User has opened Control Panel page", async function () {
+  await tests.navigationTest.openAuctionPlatformControlPanelPage();
+});
+
 When("User presses the Log In button", async function () {
   await tests.navigationTest.pressLogInButton();
 });
@@ -31,6 +35,10 @@ When("User presses the Submit button", async function () {
 
 When("User presses the Add Offer button", async function () {
   await tests.navigationTest.pressAddOfferButton();
+});
+
+When("User presses the Add Auction button under charity section", async function () {
+  await tests.administrationTest.pressAddCharityButton();
 });
 
 Then("User is redirected to Offers page", async function () {
