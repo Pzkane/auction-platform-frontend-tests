@@ -51,4 +51,9 @@ export class NavigationTest {
     await pages.offersPage.getAddOfferBtn().click();
     await browser.pause(500)
   }
+
+  async pressOkButton() {
+    await pages.basePage.getOKButton().click();
+    await browser.pause(1200)
+  }
 }

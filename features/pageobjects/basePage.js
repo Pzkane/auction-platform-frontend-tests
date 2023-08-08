@@ -15,6 +15,10 @@ export class BasePage {
     return $("button=Log In");
   }
 
+  getLogOutButton() {
+    return $(`//button//span[contains(text(),'Log Out')]`);
+  }
+
   getSignInButton() {
     return $("button=Sign In");
   }
@@ -35,4 +39,7 @@ export class BasePage {
     return $(`textarea[id="${this.baseName}_${name}"]`);
   }
 
+  getOKButton() {
+    return $(`button=Ok`);
+  }
 }

@@ -25,4 +25,9 @@ export class LoginTest {
   async assertCheckControlPanelPage() {
     await pages.checkControlPanelPage.getCheckControlPanelTab().waitForDisplayed({ timeout: 10000 });
   }
+
+  async signOut() {
+    await pages.basePage.getLogOutButton().click();
+    await browser.pause(1000);
+  }
 }

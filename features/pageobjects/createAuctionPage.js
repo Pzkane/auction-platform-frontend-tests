@@ -68,4 +68,10 @@ export class CreateAuctionPage extends BasePage {
         // Finally, show to the input that file has been uploaded
         inputField.setValue(uploadedFilePath);
     }
+
+    async selectRandomDate() {
+        const dateDropdown = this.getInputField("endDate");
+        await dateDropdown.click();
+        $(`//button[@class='v-btn v-btn--text v-btn--rounded theme--light']`).click();
+    }
 }

@@ -8,6 +8,7 @@ export class AdministrationTest {
     }
 
     async pressAddCommercialButton() {
+        await browser.pause(2000);
         await pages.controlPanelPage.getAddAuctionBtnFor("commercial").click();
     }
 
@@ -21,6 +22,15 @@ export class AdministrationTest {
         await pages.createAuctionPage.selectPicture();
         await pages.createAuctionPage.getTextArea("description").setValue(await data.auctionData.charity.description);
         await pages.createAuctionPage.getInputField("goal").setValue(await data.auctionData.charity.goal);
+    }
+
+    async fillOutCreateCommercialAuctionForm() {
+        await pages.createAuctionPage.getInputField("objName").setValue(await data.auctionData.commercial.objName);
+        await pages.createAuctionPage.randomSelectObjectType("commercial");
+        await pages.createAuctionPage.selectPicture();
+        await pages.createAuctionPage.getTextArea("description").setValue(await data.auctionData.commercial.description);
+        await pages.createAuctionPage.getInputField("startBid").setValue(await data.auctionData.commercial.startBid);
+        await pages.createAuctionPage.selectRandomDate();
     }
 
     async assertAuctionIsCreated() {

@@ -12,3 +12,7 @@ When("User inputs {word} as the password", async function (password) {
 Then("User sees invalid credentials message", async function () {
   await tests.loginTest.assertInvalidCredentialsMsg();
 });
+
+Then("User signs out of the account", async function () {
+  await tests.loginTest.signOut();
+});

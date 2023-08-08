@@ -5,10 +5,14 @@ When("User fills out Add Charity Auction form", async function () {
   await tests.administrationTest.fillOutCreateCharityAuctionForm();
 });
 
+When("User fills out Add Commercial Auction form", async function () {
+  await tests.administrationTest.fillOutCreateCommercialAuctionForm();
+});
+
 When("User presses the Submit button to create auction", async function () {
   await tests.administrationTest.pressSubmitAuctionButton();
 });
 
-Then("User sees successful alert about created auction", async function () {
+When("User sees successful alert about created auction", async function () {
   await tests.administrationTest.assertAuctionIsCreated();
 });

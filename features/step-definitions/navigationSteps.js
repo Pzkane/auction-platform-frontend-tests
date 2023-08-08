@@ -37,8 +37,16 @@ When("User presses the Add Offer button", async function () {
   await tests.navigationTest.pressAddOfferButton();
 });
 
+When("User dismisses modal pop-up", async function () {
+  await tests.navigationTest.pressOkButton();
+});
+
 When("User presses the Add Auction button under charity section", async function () {
   await tests.administrationTest.pressAddCharityButton();
+});
+
+When("User presses the Add Auction button under commercial section", async function () {
+  await tests.administrationTest.pressAddCommercialButton();
 });
 
 Then("User is redirected to Offers page", async function () {
