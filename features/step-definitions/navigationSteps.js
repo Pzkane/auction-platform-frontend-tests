@@ -21,6 +21,10 @@ Given("User has opened Control Panel page", async function () {
   await tests.navigationTest.openAuctionPlatformControlPanelPage();
 });
 
+Given("User has opened Auction page", async function () {
+  await tests.navigationTest.openAuctionsPage();
+});
+
 When("User presses the Log In button", async function () {
   await tests.navigationTest.pressLogInButton();
 });
