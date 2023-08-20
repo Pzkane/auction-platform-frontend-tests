@@ -3,6 +3,10 @@ export class BasePage {
     this.baseName = baseName;
   }
 
+  getContainingButton(contains) {
+    return $(`//button//span[contains(text(),'${contains}')]`);
+  }
+
   getEmailInputField() {
     return $("#Login_username");
   }
@@ -16,7 +20,7 @@ export class BasePage {
   }
 
   getLogOutButton() {
-    return $(`//button//span[contains(text(),'Log Out')]`);
+    return this.getContainingButton('Log Out');
   }
 
   getSignInButton() {

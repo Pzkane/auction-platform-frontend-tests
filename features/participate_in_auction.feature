@@ -20,3 +20,11 @@ Scenario: Participate in charity auction
   Examples:
       | paypal_email          | paypal_secret    |
       | projektsTest@mail.com | 12345678         |
+
+@auctionParticipation
+Scenario: Participate in commercial auction
+  Given User has opened Auction page
+  When User places bid
+  And User sees successful alert about participation
+  And User dismisses modal pop-up
+  Then User signs out of the account
