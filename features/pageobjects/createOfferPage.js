@@ -23,7 +23,7 @@ export class CreateOfferPage extends BasePage {
     const dropdown = this.getSelectTagDropdown(tagPosition);
     await dropdown.click();
     // Then select test element from the list and click it
-    const tag = await $$(`//div[text()="test_tag_category" and @class='v-list-item__title']`)[tagPosition-1];
+    const tag = await $$(`//div[text()="test_tag_categories" and @class='v-list-item__title']`)[tagPosition-1];
     await tag.click();
   }
 
